@@ -7,7 +7,7 @@
 // document.body.innerHTML += `<h2>${welcomeUser}</h2>`;
 
 function askName() {
-    let welcomeUser = "\ud83d\udc4b Bonjour " + prompt("Quel est ton nom ?");
+    let welcomeUser = "\ud83d\udc4b Bonjour " + prompt("Quel est ton prénom ?");
     return document.body.innerHTML += `<h2>${welcomeUser}</h2>`;
 };
 
