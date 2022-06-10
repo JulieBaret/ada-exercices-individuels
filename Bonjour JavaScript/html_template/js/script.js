@@ -16,12 +16,28 @@ function askName() {
 // let welcomeAgeUser = `Vous avez ${ageUser} ans.`;
 // document.body.innerHTML += `<h3>${welcomeAgeUser}</h3>`;
 
+// function askBirthYear() {
+//     let ageUser = new Date().getFullYear() - parseInt(prompt("En quelle année es-tu née ?"));
+//     let welcomeAgeUser = `Vous avez ${ageUser} ans.`;
+//     return document.body.innerHTML += `<h3>${welcomeAgeUser}</h3>`;
+// };
+
+// Etape Bonus
 function askBirthYear() {
-    let ageUser = new Date().getFullYear() - parseInt(prompt("En quelle année es-tu née ?"));
+    let ageYearUser = new Date().getFullYear() - parseInt(prompt("En quelle année es-tu né.e ?"));
+    let ageMonthUser = new Date().getMonth() - parseInt(prompt("En quel mois es-tu né.e ?"));
+    let ageUser;
+    if (new Date().getMonth() - ageMonthUser >= 0) {
+        ageUser = ageYearUser
+    }
+    else {
+        ageUser = ageYearUser - 1
+    };
     let welcomeAgeUser = `Vous avez ${ageUser} ans.`;
     return document.body.innerHTML += `<h3>${welcomeAgeUser}</h3>`;
-}
+};
 
-
+console.log(new Date().getMonth());
+console.log(new Date().getFullYear());
 askName ();
 askBirthYear ();

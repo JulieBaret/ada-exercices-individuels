@@ -5,7 +5,7 @@ Commencer par télécharger le template.
 Dans le fichier script.js, utilisez la fonction prompt() pour demander son nom à l’utilisateur.ice
 Creer une variable de texte dans laquelle vous utiliserez la concaténation pour stocker la chaine de caractère “👋 Bonjour” suivi du nom saisi par l’utilisateur.ice.
 Ajouter un element h2 dans le corps de la page HTML qui entoure la chaine de caractères stockée.
-Pour ajouter un élément au contenu de la page HTML, dans cet exercice, nous utiliserons le procédé suivant: document.body.innerHTML += '<h1> Coucou! </h1>’ notez l’usage de l’opérateur “+=” qui implique une addition au contenu existant dans la variable, ici document.body.innerHTML, qui correspond à notre page HTML.
+Pour ajouter un élément au contenu de la page HTML, dans cet exercice, nous utiliserons le procédé suivant: document.body.innerHTML += "<h1> Coucou! </h1>’ notez l’usage de l’opérateur “+=” qui implique une addition au contenu existant dans la variable, ici document.body.innerHTML, qui correspond à notre page HTML.
 
 Étape 2: Faisons connaissance 😇
 À la suite de ce qui a été écrit dans l’étape 1, réutiliser le même procédé pour demander l’année de naissance de l’utilisateur.ice.
