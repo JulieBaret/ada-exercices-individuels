@@ -11,18 +11,19 @@ function askName() {
     return document.body.innerHTML += `<h2>${welcomeUser}</h2>`;
 };
 
-// Etape 2
+// Etape 2 : avec variable
 // let ageUser = new Date().getFullYear() - parseInt(prompt("En quelle année es-tu née ?"));
 // let welcomeAgeUser = `Vous avez ${ageUser} ans.`;
 // document.body.innerHTML += `<h3>${welcomeAgeUser}</h3>`;
 
-// function askBirthYear() {
+// Etape 2 : avec fonction
+//     function askBirthYear() {
 //     let ageUser = new Date().getFullYear() - parseInt(prompt("En quelle année es-tu née ?"));
 //     let welcomeAgeUser = `Vous avez ${ageUser} ans.`;
 //     return document.body.innerHTML += `<h3>${welcomeAgeUser}</h3>`;
 // };
 
-// Etape Bonus
+// Etape Bonus : ajout mois
 function askBirthYear() {
     let ageYearUser = new Date().getFullYear() - parseInt(prompt("En quelle année es-tu né.e ?"));
     let ageMonthUser = new Date().getMonth() - parseInt(prompt("En quel mois es-tu né.e ?"));
