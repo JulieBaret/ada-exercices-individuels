@@ -52,4 +52,4 @@ function sapin(end){
     }
 }
 
-sapin(8)
+sapin(20)
