@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let billes = 50;
+
+        function retirerBilles(n) {
+            billes -= n;
+            return billes;
+        };
+
+        function jeu() {
+            while (billes > 0) {
+                let billesEnMoins = parseInt(prompt(`Il reste ${billes} billes.\nCombien de billes veux-tu retirer ?\n(Entre 1 et 6)`));
+
+                if (billesEnMoins > billes) {
+                    alert("Tu ne peux pas retirer plus de billes qu'il n'en reste !");
+                    jeu();
+                };
+                
+                if (billesEnMoins < 1 || billesEnMoins > 6) {
+                    alert("Tu dois retirer entre 1 et 6 billes.")
+                    jeu();
+                };
+
+                retirerBilles(billesEnMoins);
+
+                if (billes == 0) {
+                    alert("Bravo ! Tu as retiré la dernière bille !");
+                }
+            };
+        };
+
+        jeu();
+    </script>
+</body>
+
+</html>
