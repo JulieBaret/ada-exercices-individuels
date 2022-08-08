@@ -30,4 +30,11 @@ function sum2(array, arrayLength) {
 let myArray = [1, 2, 3, 4, 5];
 console.log(sum2(myArray, myArray.length));
 
-fun
+function sum3(array){
+    if (array.length == 0){
+        return 0
+    }
+    return array.shift() + sum3(array)
+}
+
+console.log(sum3([1, 2, 3, 4, 5, 6]))
