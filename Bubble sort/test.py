@@ -5,10 +5,10 @@ my_list = [9, -5, 1, 8, -3, 7, 7, 89, 192]
 def sort_my_list(list):
     operations = 0
     stop = len(list)
-    for i in range(stop):
+    for i in range(stop-1):
         for j in range(stop-1):
             operations+=1
-            if(list[j]>list[j+1]):
+            if list[j]>list[j+1] :
                 temp = list[j]
                 list[j] = list[j+1]
                 list[j+1] = temp
@@ -17,7 +17,6 @@ def sort_my_list(list):
 sorted_list, nb_operations = sort_my_list(my_list)
 print(f"La liste classée : {sorted_list}")
 print(f"Le nombre d'opérations : {nb_operations}")
-
 
 ##classer un tableau du plus grand au plus petit
 def unsort_my_list(list):
