@@ -33,7 +33,7 @@ def translate(list, dict):
 
 text_compressed = translate(text_sliced, fix_dict)
 join_compressed_text = join_text(text_compressed)
-print("Le texte compressé : " + join_compressed_text)
+# print("Le texte compressé : " + join_compressed_text)
 
 #Etape 3 Décompression
 def reverse_dict(dict):
@@ -47,4 +47,57 @@ def reverse_dict(dict):
 reversed_dict = reverse_dict(fix_dict)
 reversed_text = translate(text_compressed, reversed_dict)
 join_reversed_text = join_text(reversed_text)
-print("Le texte rétabli : "+ join_reversed_text)
+# print("Le texte rétabli : "+ join_reversed_text)
+
+#Etape 4 Un meilleur dictionnaire
+
+#générer un dictionnaire qui compte combien de fois un mot apparait dans une liste
+def count_words(list):
+    word_counter = {}
+    for word in list:
+        counter = list.count(word)
+        word_counter[word]=counter
+    return word_counter
+
+new_list = ['ceci', 'est', 'un', 'faux-texte', 'ceci', 'est']
+
+# print(count_words(new_list))
+
+#filtrer les mots de plus de trois caractères qui apparaissent au moins deux fois
+def filter_words(dict):
+    dict_filtered = {}
+    for key, value in dict.items():
+        if len(key)>=3 and int(value)>=2:
+            dict_filtered[key]=value
+    return dict_filtered
+
+dict_for_example = {'avec': 3, 'tous': 1, 'un': 23, 'nuit': 10}
+
+# print(filter_words(dict_for_example))
+
+#Générer un meilleur dictionnaire pour notre texte de départ
+all_words_counted = count_words(text_sliced)
+all_words_filtered = filter_words(all_words_counted)
+# print(all_words_filtered)
+
+better_dict = {
+    'texte': '1',
+    'faux-texte': '10',
+    'été': '3',
+    'lorem': '11',
+    'qui': '5',
+    'est': '6',
+    'que': '7',
+    'pas': '8',
+    'des': '9',
+    'une': '2',
+    'ceci': '15',
+    'dans': '12',
+    "l'espace": '13',
+    "l'utilisation": '14',
+    'plus': '3'
+}
+
+new_compression = join_text(translate(text_sliced, better_dict))
+print(len(new_compression))
+print(len(text_to_compress))
